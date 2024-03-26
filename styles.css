@@ -7,9 +7,9 @@ function fibonacci(num) {
 		return a
 	}
 	for (let index = 2; index < num-1; index++) {
+		c = a+b;
 		a=b;
 		b=c;
-		c = a+b;
 	}
 	return c;
 }
