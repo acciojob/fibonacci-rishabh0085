@@ -1,18 +1,19 @@
-
-function fibonacci(n) {
-
-	let a = -1
-    let b = 1
-    let c = 0
-    for(let i=0; i<=n; i++)
-    {
-        c = a+b
-        if(i==n)
-        {
-            return c
-        }
-        a = b
-        b = c
+function fibonacci(num) {
+    // Handle the base cases
+    if (num === 0) return 0;
+    if (num === 1) return 1;
+    
+    // Initialize the first two Fibonacci numbers
+    let a = 0;
+    let b = 1;
+    
+    // Iterate to compute the Fibonacci number at position 'num'
+    for (let i = 2; i <= num; i++) {
+        let c = a + b;
+        a = b;
+        b = c;
     }
-	return 0
+    
+    // Return the Fibonacci number at the 'num' position
+    return b;
 }
